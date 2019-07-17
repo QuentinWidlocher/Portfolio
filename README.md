@@ -11,7 +11,7 @@
 
 It's already done but you can compile SCSS to CSS :
 ```sh
-> scss ./scss/style.scss ./style.css --style=compressed
+> sass ./scss/style.scss ./style.css --style=compressed
 ```
 
 ## Usage

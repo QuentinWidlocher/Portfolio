@@ -7,9 +7,7 @@ button, a {
         color: white;
         cursor: pointer;
 
-        transition-property: background-position;
-        transition-duration: .5s;
-        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        transition: $transition;
 
         background-repeat: space;
 
