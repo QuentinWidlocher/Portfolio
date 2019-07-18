@@ -51,13 +51,12 @@ section.projects {
                             margin-left: 1rem;
                             opacity: 0.5;
                             font-size: 1rem;
-                            font-weight: 600;
+                            font-weight: 500;
                             font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         }
                     }
 
                     >div.card__badges>span.card__badge {
-                        background-color: rgba(54, 209, 220, 0.5);
                         font-weight: 600;
                         mix-blend-mode: overlay;
 
@@ -72,12 +71,6 @@ section.projects {
                 >div.card__gradient {
                     width: 100%;
                     height: 75%;
-
-                    background: rgb(91, 134, 229);
-                    background: -moz-linear-gradient(45deg, rgba(91, 134, 229, 1) 0%, rgba(54, 209, 220, 1) 100%);
-                    background: -webkit-linear-gradient(45deg, rgba(91, 134, 229, 1) 0%, rgba(54, 209, 220, 1) 100%);
-                    background: linear-gradient(45deg, rgba(91, 134, 229, 1) 0%, rgba(54, 209, 220, 1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b86e5", endColorstr="#36d1dc", GradientType=1);
 
                     border-top-left-radius: $card_radius;
                     border-top-right-radius: $card_radius;
