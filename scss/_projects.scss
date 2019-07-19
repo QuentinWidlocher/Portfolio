@@ -58,6 +58,7 @@ section.projects {
 
                     >div.card__badges>span.card__badge {
                         font-weight: 600;
+                        color: rgba($color: black, $alpha: 0.75);
                         mix-blend-mode: overlay;
 
                         $badge_padding: 5px;

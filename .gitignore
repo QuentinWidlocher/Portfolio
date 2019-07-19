@@ -1,2 +1,3 @@
 # Replace with your own firebaseConfig
 js/firebase/firebase-config.js
+.vscode/*
