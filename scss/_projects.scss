@@ -16,8 +16,10 @@ section.projects {
             $card_size: 25rem;
             $card_radius: 0.5rem;
             height: $card_size;
-            width: $card_size;
+            min-width: $card_size;
             border-radius: $card_radius;
+
+            display: block;
 
             margin-bottom: $space;
 
@@ -56,16 +58,22 @@ section.projects {
                         }
                     }
 
-                    >div.card__badges>span.card__badge {
-                        font-weight: 600;
-                        color: rgba($color: black, $alpha: 0.75);
-                        mix-blend-mode: overlay;
+                    >div.card__badges {
 
-                        $badge_padding: 5px;
-                        padding: $badge_padding;
-                        padding-left: calc(#{$badge_padding}*2);
-                        padding-right: calc(#{$badge_padding}*2);
-                        border-radius: 5rem;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        >div.card__badge {
+                            font-weight: 600;
+                            color: rgba($color: black, $alpha: 0.75);
+                            margin-right: 0.5rem;
+
+                            $badge_padding: 5px;
+                            padding: $badge_padding;
+                            padding-left: calc(#{$badge_padding}*2);
+                            padding-right: calc(#{$badge_padding}*2);
+                            border-radius: 5rem;
+                        }
                     }
                 }
 
@@ -79,6 +87,14 @@ section.projects {
                     display: flex;
                     place-content: center;
                     place-items: center;
+
+                    --gradientAngle: 45deg;
+                    --gradientStart: white;
+                    --gradientEnd: white;
+                    background: var(--gradientStart);
+                    background: -moz-linear-gradient(var(--gradientAngle), var(--gradientStart) 0%, var(--gradientEnd) 100%);
+                    background: -webkit-linear-gradient(var(--gradientAngle), var(--gradientStart) 0%, var(--gradientEnd) 100%);
+                    background: linear-gradient(var(--gradientAngle), var(--gradientStart) 0%, var(--gradientEnd) 100%);
                 }
             }
         }

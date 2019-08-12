@@ -1,19 +1,18 @@
 function createCard({name, description, picture, link, tags, gradientStart, gradientEnd, gradientAngle}) {
     let badges = '';
-    tags.forEach(tag => {
-        badges += `\n<span class="card__badge" style="background-color: #${gradientEnd}7F;">${tag}</span>`
-    });
 
-    let gradient = `
-        background: #${gradientStart};
-        background: -moz-linear-gradient(${gradientAngle}deg, #${gradientStart} 0%, #${gradientEnd} 100%);
-        background: -webkit-linear-gradient(${gradientAngle}deg, #${gradientStart} 0%, #${gradientEnd} 100%);
-        background: linear-gradient(${gradientAngle}deg, #${gradientStart} 0%, #${gradientEnd} 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#${gradientStart}', endColorstr='#${gradientEnd}', GradientType=1);
-    `;
+    if (tags) {
+        tags.forEach(tag => {
+            badges += `\n<div class="card__badge" style="background-color: #${gradientEnd}7F;">${tag}</div>`
+        });
+    }
+
+    let gradient = `--gradientAngle: ${gradientAngle}deg; --gradientStart: #${gradientStart}; --gradientEnd: #${gradientEnd};`;
+
+    let href = (link ? `href="${link}"` : '');
 
     let htmlString = `
-        <a href="${link}">
+        <a ${href}>
             <div class="card__gradient" style="${gradient}">
                 <img class="card_image" src="${picture}" alt="${name} Logo" width="200">
             </div>
