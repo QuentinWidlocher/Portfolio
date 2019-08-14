@@ -66,7 +66,7 @@ function getTextColor(bgColor) {
 }
 
 
-db.collection('projects').get().then(function (querySnapshot) {
+db.collection('projects').orderBy("editionDate", "desc").get().then(function (querySnapshot) {
     querySnapshot.forEach(function (doc) {
         let newCard = createCard(doc.data());
         document.querySelector('section.projects__cards').append(newCard);
