@@ -15,10 +15,12 @@ function createCard({name, description, picture, link, tags, gradientStart, grad
 
     let href = (link ? `href="${link}"` : '');
 
+    let image = picture ? `<img class="card__image" src="${picture}" alt="${name} Logo">` : ""
+
     let htmlString = `
         <a ${href}>
             <div class="card__gradient" style="${gradientStyle}">
-                <img class="card_image" src="${picture}" alt="${name} Logo" width="200">
+                ${image}
             </div>
             <div class="card__info">
                 <div class="card__title">
